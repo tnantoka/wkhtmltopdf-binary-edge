@@ -11,7 +11,7 @@ suffix = if os.eql?('linux')
            elsif arch.eql('x86')
              'linux-x86'
            end
-         elsif os.eql?('darwin')
+         elsif os =~ /darwin/
            'darwin-x86'
          else
            raise "Invalid platform. Must be running linux or intel-based Mac OS."
